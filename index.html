@@ -8,16 +8,17 @@
 </head>
 <body>
   <button id="getText">Get Text</button>
+  <div id="output"></div>
   <script>
     document.getElementById('getText').addEventListener('click', getText);
-
     function getText(){
       fetch('sample.txt')
-      .then((res)=>res.text())
-      .then((data)=>console.log(data))
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById('output').innerHTML = data;
+      })
+      .catch((err) => console.log(err));
     }
-
-
   </script>
 </body>
 </html>
