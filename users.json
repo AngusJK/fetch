@@ -1,0 +1,17 @@
+[
+  {
+    "id":1,
+    "name":"Shohei",
+    "email":"shotime@angels.com"
+  },
+  {
+    "id":2,
+    "name":"Mike",
+    "email":"mvp27@angels.com"
+  },
+  {
+    "id":3,
+    "name":"Anthony",
+    "email":"rendon@angels.com"
+  }
+]
