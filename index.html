@@ -12,31 +12,24 @@
 </head>
 <body>
   <div class="container">
-
     <h1 class="display-4 mb-4">Fetch API Sandbox</h1>
-
     <div class="d-flex">
-      <button class="btn btn-primary mr-4" id="getText">Get Text</button>
-      <button class="btn btn-success mr-4" id="getUsers">Get JSON</button>
-      <button class="btn btn-warning mr-4" id="getPosts">Get API DATA</button>
+      <button class="btn btn-primary m-3" id="getText">Get Text</button>
+      <button class="btn btn-success m-3" id="getUsers">Get JSON</button>
+      <button class="btn btn-warning m-3" id="getPosts">Get API DATA</button>
     </div>
-
     <hr>
-
     <div id="output"></div>
-
     <form id="addPost">
       <div class="form-group">
-        <input type="text" id="title" placeholder="Title" class="form-control">
+        <input type="text" id="title" placeholder="Title" class="form-control mb-1">
       </div>
-      <div class="form-group">
+      <div class="form-group mb-3">
         <textarea id="body" placeholder="Body" class="form-control"></textarea>
       </div>
       <input type="submit" class="btn btn-secondary" value="Submit">
     </form>
-
   </div>
-
   <script>
     document.getElementById('getText').addEventListener('click', getText);
     document.getElementById('getUsers').addEventListener('click', getUsers);
@@ -54,7 +47,7 @@
       fetch('users.json')
       .then((res) => res.json())
       .then((data) => {
-        let output = '<h2>Users</h2>';
+        let output = '<h2 class="mb-4">Users</h2>';
         data.forEach(function(user) {
           output += `
             <ul class="list-group mb-3">
@@ -71,10 +64,10 @@
       fetch('https://jsonplaceholder.typicode.com/posts')
       .then((res) => res.json())
       .then((data) => {
-        let output = '<h2>Posts</h2>';
+        let output = '<h2 class="mb-4">Posts</h2>';
         data.forEach(function(post) {
           output += `
-            <div>
+            <div class="card card-body mb-3">
               <h3>${post.title}</h3>  
               <p>${post.body}</p>
             </div>
@@ -99,6 +92,5 @@
       .then((data) => console.log(data))
     }
   </script>
-  
 </body>
 </html>
