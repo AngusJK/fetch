@@ -12,23 +12,29 @@
 </head>
 <body>
   <div class="container">
+
     <h1 class="display-4 mb-4">Fetch API Sandbox</h1>
+
     <div class="d-flex">
       <button class="btn btn-primary mr-4" id="getText">Get Text</button>
       <button class="btn btn-success mr-4" id="getUsers">Get JSON</button>
       <button class="btn btn-warning mr-4" id="getPosts">Get API DATA</button>
     </div>
+
     <hr>
+
     <div id="output"></div>
+
     <form id="addPost">
-      <div>
-        <input type="text" id="title" placeholder="Title">
+      <div class="form-group">
+        <input type="text" id="title" placeholder="Title" class="form-control">
       </div>
-      <div>
-        <textarea id="body" placeholder="Body"></textarea>
+      <div class="form-group">
+        <textarea id="body" placeholder="Body" class="form-control"></textarea>
       </div>
-      <input type="submit" value="Submit">
+      <input type="submit" class="btn btn-secondary" value="Submit">
     </form>
+
   </div>
 
   <script>
